@@ -1,0 +1,31 @@
+
+body {
+    display: grid;
+    place-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body{
+    height: 100%;
+
+}
+
+#table {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.row {
+    display: flex;
+}
+
+.tile {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 1px solid black;
+    font-size: larger;
+}
