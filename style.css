@@ -10,22 +10,22 @@ html, body{
 
 }
 
-#table {
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
 
 .row {
     display: flex;
 }
 
 .tile {
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
     outline: 1px solid black;
     font-size: larger;
 }
+
+/* #tileid input:hover{
+    background-color: black;
+} */

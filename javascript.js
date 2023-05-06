@@ -1,5 +1,5 @@
 const button = document.querySelector("#button");
-let grids = document.querySelector("#container");
+
 
 let number = 0;
 
@@ -9,23 +9,28 @@ button.addEventListener ('click', function () {
     
 })
 
+container.addEventListener ('mouseover', function (e) {
+    e.target.style.backgroundColor = 'black';
+});
+
 function createRow(width) {
+
     let number = width;
-    let fragment = document.createDocumentFragment();
-
-    Array.from( {length : number}).forEach(element => {
+    // let fragment = document.createDocumentFragment();
+    let container = document.querySelector("#container");
+    for (let i = 1; i <= number; i++) {
         let row = document.createElement('div');
-        row.classList.add("row");
-        Array.from( {length : number}).forEach(element => {
+        row.classList.toggle("row");
+        for (let j = 1; j <= number; j++) {
             let tile = document.createElement('div');
-            tile.classList.add("tile");
+            tile.classList.toggle("tile");
+            console.log(tile);
+            // tile.setAttribute('id', "tileID");
             row.appendChild(tile);
-        });
+        };
+        container.appendChild(row);
+    };
+    // container.appendChild(fragment);
 
-        fragment.appendChild(row);
-
-    });
-grids.appendChild(fragment);
-return;
 }
 
