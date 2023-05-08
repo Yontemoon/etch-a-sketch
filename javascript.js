@@ -10,8 +10,12 @@ button.addEventListener ('click', function () {
 })
 
 reset.addEventListener ('click', function () {
-    
-    container.children.style.backgroundColor = 'white';
+
+    const child = container.querySelectorAll('.tile');
+    for (let i = 0; i <= child.length; i++) {
+        child[i].style.backgroundColor = 'white';
+    }
+
     
 })
 
